@@ -1,26 +1,31 @@
-import About from "./About"
-import Contact from "./Contact"
-import Portfolio from "./Portfolio"
-import Nav from "./Nav"
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
+import About from "./About"
+import Portfolio from "./Portfolio"
+import Contact from "./Contact"
+import Navs from "./Nav"
+
+
+
+
+
 
 const App = () => {
   return (
     <Router>
-    <div className="App">
-      <Nav />
-        <div className="content">
-          <Routes>
+      <div className="App">
+        <Navs/>
+          <div className="content">
+            <Routes>
 
-            <Route path="/" element={<About/>} />
-            <Route path="/contact" element={<Contact/>} />
-            <Route path="/portfolio" element={<Portfolio/>} />
+              <Route path="/about" element={<About/>} />
+              <Route path="/portfolio" element={<Portfolio/>} />
+              <Route path="/contact" element={<Contact/>} />
 
-          </Routes>
-     
-        </div>
-    </div>
-  </Router> 
+            </Routes>
+       
+          </div>
+      </div>
+    </Router> 
   );
 }
 
